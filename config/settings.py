@@ -90,8 +90,9 @@ STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')  # Corrigido: antes era baseado em STATIC_URL
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'app/static/'),
+    BASE_DIR / "app/static",  # Verifique se este caminho está correto
 ]
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Django Crispy Forms
